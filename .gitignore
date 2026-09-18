@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+env/
+
+# Data & models (often too large / regenerable — optional, your call)
+data/*.csv
+models/*.pkl
+
+# OS junk
+.DS_Store
