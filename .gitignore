@@ -9,7 +9,7 @@ env/
 
 # Data & models (often too large / regenerable — optional, your call)
 data/*.csv
-models/*.pkl
+#models/*.pkl
 
 # OS junk
 .DS_Store

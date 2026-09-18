@@ -126,15 +126,15 @@ def uses_https(url: str) -> int:
 # The exact order matters — it MUST match the column order the model was
 # trained on. FEATURE_NAMES here is the single source of truth for that order.
 FEATURE_NAMES = [
-    "having_IP_Address",
-    "URL_Length",
-    "Shortining_Service",
-    "having_At_Symbol",
+    "having_ip_address",
+    "url_length",
+    "shortining_service",
+    "having_at_symbol",
     "double_slash_redirecting",
-    "Prefix_Suffix",
-    "having_Sub_Domain",
+    "prefix_suffix",
+    "having_sub_domain",
     "port",
-    "HTTPS_token",
+    "https_token",
     "uses_https",
 ]
 
