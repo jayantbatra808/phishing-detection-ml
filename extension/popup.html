@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 280px;
+      font-family: -apple-system, Segoe UI, Arial, sans-serif;
+      padding: 16px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 15px;
+      margin: 0 0 12px 0;
+    }
+    #current-url {
+      font-size: 11px;
+      color: #666;
+      word-break: break-all;
+      margin-bottom: 12px;
+      max-height: 40px;
+      overflow-y: auto;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background: #2563eb;
+      color: white;
+    }
+    button:disabled {
+      background: #9ca3af;
+      cursor: default;
+    }
+    #result {
+      margin-top: 14px;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      display: none;
+    }
+    .legitimate {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .phishing {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    .error {
+      background: #fef3c7;
+      color: #92400e;
+    }
+  </style>
+</head>
+<body>
+  <h1>Phishing Website Detector</h1>
+  <div id="current-url">Loading current tab...</div>
+  <button id="check-btn">Check this site</button>
+  <div id="result"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

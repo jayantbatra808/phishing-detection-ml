@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Phishing Website Detector",
+  "version": "1.0",
+  "description": "Checks whether the current website looks like phishing, using a locally running ML model.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://phishing-detection-ml-xsjo.onrender.com/*"]
+}

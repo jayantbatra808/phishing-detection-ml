@@ -11,6 +11,7 @@ Run locally with:
 Then it's reachable at http://127.0.0.1:5000
 """
 
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
@@ -23,6 +24,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
 from feature_extractor import FEATURE_NAMES, extract_features_dict
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # --- Load the model ONCE when the server starts, not per-request. ---
 # Loading a model from disk takes time; doing it on every request would make
@@ -84,6 +86,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    # debug=True auto-reloads the server on code changes — handy while
-    # developing, but should be turned OFF before any real deployment.
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
